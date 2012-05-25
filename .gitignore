@@ -1,0 +1,15 @@
+target/
+.target/
+reports/
+
+.cache
+
+.ensime
+.project
+.classpath
+.settings/
+
+.scala_dependencies
+
+routes.sclasner
+log/
