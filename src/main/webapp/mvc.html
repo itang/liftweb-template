@@ -6,6 +6,14 @@
 </head>
 <body class="lift:content_id=content">
   <div id="content" class="lift:surround?with=default;at=content">
+    <!-- 演示 automatically merge -->
+    <head>
+      <script type="text/javascript" src="http://github.com/ded/script.js"></script>
+    </head>
+    <!-- 演示资源合并的尾部, </body>之前 -->
+    <lift:tail>
+      <script type="text/javascript" src="http://code.angularjs.org/angular-1.0.0rc10.js"></script>
+    </lift:tail>
     <h2>MVC</h2>
   </div>
 </body>
