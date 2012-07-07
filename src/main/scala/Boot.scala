@@ -1,17 +1,12 @@
 package bootstrap.liftweb
 
+import app.util.Util
 import net.liftweb.common.Full
 import net.liftweb.http.LiftRulesMocker.toLiftRules
-import net.liftweb.http.Html5Properties
-import net.liftweb.http.LiftRules
-import net.liftweb.http.Req
-import net.liftweb.http.ResourceServer
+import net.liftweb.http.{XHtmlInHtml5OutProperties, ResourceServer, Req, LiftRules}
 import net.liftweb.sitemap.LocPath.stringToLocPath
-import net.liftweb.sitemap.Menu
-import net.liftweb.sitemap.SiteMap
+import net.liftweb.sitemap.{SiteMap, Menu}
 import net.liftweb.util.Vendor.valToVender
-import app.util._
-import net.liftweb.http.XHtmlInHtml5OutProperties
 
 /**
  * A class that's instantiated early and run.

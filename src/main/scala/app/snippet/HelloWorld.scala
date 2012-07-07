@@ -5,6 +5,7 @@ import java.util.Date
 import app.lib.DependencyFactory
 import net.liftweb.common.Box
 import net.liftweb.util.Helpers._
+import net.liftweb.util.IterableConst.boxString
 
 class HelloWorld {
   lazy val date: Box[Date] = DependencyFactory.inject[Date] // inject the date

@@ -26,10 +26,10 @@ object Build extends Build {
   object Dependencies {
     import Versions._
     val commonsDependencies = Seq(
-      "org.eclipse.jetty" % "jetty-webapp" % "8.0.4.v20111024" % "container", // For Jetty 8
+      "org.eclipse.jetty" % "jetty-webapp" % jettyVersion  % "container", // For Jetty 8
       //"org.eclipse.jetty" % "jetty-webapp" % "7.5.4.v20111024" % "container",
       "javax.servlet" % "servlet-api" % "2.5" % "provided->default",
-      "ch.qos.logback" % "logback-classic" % "1.0.3" % "compile->default",
+      "ch.qos.logback" % "logback-classic" % "1.0.6" % "compile->default",
       "com.h2database" % "h2" % "1.3.167",
       "postgresql" % "postgresql" % "9.1-901-1.jdbc4" % "compile->default",
       "junit" % "junit" % "4.10" % "test->default")
@@ -48,6 +48,6 @@ object Build extends Build {
 
   object Versions {
     val liftVersion = "2.4"
-    val jettyVersion = "6.1.22"
+    val jettyVersion = "8.0.4.v20111024"
   }
 }

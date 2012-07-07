@@ -2,7 +2,7 @@ package app.lib
 
 import net.liftweb.http.Factory
 import net.liftweb.util.Vendor.funcToVender
-import net.liftweb.util.Helpers
+import net.liftweb.util._
 
 /**
  * A factory for generating new instances of Date.  You can create
