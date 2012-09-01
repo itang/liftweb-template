@@ -2,10 +2,12 @@ import sbt._
 import Keys._
 
 object Build extends Build {
+
   import Resolvers._
   import BuildSettings._
   import Tasks._
   import Dependencies._
+  import Versions._
 
   lazy val liftwebAppTemplate = Project(
     id = "liftweb_app_template",
@@ -16,6 +18,7 @@ object Build extends Build {
 
   object BuildSettings {
     val buildSettings = Defaults.defaultSettings ++ Seq(
+      scalaVersion := scalaBuildVersion,
       scalacOptions ++= Seq(
         "-deprecation",
         "-unchecked"),
@@ -24,7 +27,6 @@ object Build extends Build {
   }
 
   object Dependencies {
-    import Versions._
     val commonsDependencies = Seq(
       "org.eclipse.jetty" % "jetty-webapp" % jettyVersion  % "container", // For Jetty 8
       //"org.eclipse.jetty" % "jetty-webapp" % "7.5.4.v20111024" % "container",
@@ -47,6 +49,7 @@ object Build extends Build {
   }
 
   object Versions {
+    val scalaBuildVersion = "2.9.1"
     val liftVersion = "2.4"
     val jettyVersion = "8.0.4.v20111024"
   }
