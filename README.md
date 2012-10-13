@@ -2,7 +2,7 @@ liftweb-template
 ----------------
 
 - liftweb 2.4
-- sbt-0.12.0
+- sbt-0.12.1
 - bootstrap-2.0.3
 
 ### Usage
