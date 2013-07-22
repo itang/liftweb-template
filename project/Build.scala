@@ -13,7 +13,7 @@ object Build extends Build {
     id = "liftweb_app_template",
     base = file("."),
     settings = buildSettings ++
-      seq(com.github.siasia.WebPlugin.webSettings: _*) ++
+      seq(com.earldouglas.xsbtwebplugin.WebPlugin.webSettings: _*) ++
       Seq(libraryDependencies := commonsDependencies ++ liftwebDependencies))
 
   object BuildSettings {
@@ -22,7 +22,7 @@ object Build extends Build {
       scalacOptions ++= Seq(
         "-deprecation",
         "-unchecked"),
-      javaOptions += "-Xmx912m",
+      javaOptions += "-Xmx1g",
       javacOptions ++= Seq("-encoding", "UTF-8", "-source", "1.6", "-target", "1.6"))
   }
 
@@ -31,9 +31,9 @@ object Build extends Build {
       "org.eclipse.jetty" % "jetty-webapp" % jettyVersion  % "container", // For Jetty 8
       //"org.eclipse.jetty" % "jetty-webapp" % "7.5.4.v20111024" % "container",
       "javax.servlet" % "servlet-api" % "2.5" % "provided->default",
-      "ch.qos.logback" % "logback-classic" % "1.0.6" % "compile->default",
-      "com.h2database" % "h2" % "1.3.167",
-      "postgresql" % "postgresql" % "9.1-901-1.jdbc4" % "compile->default",
+      "ch.qos.logback" % "logback-classic" % logbackVersion % "compile->default",
+      "com.h2database" % "h2" % h2Version,
+      "org.postgresql" % "postgresql" % postgresqlVersion  % "compile->default",
       "junit" % "junit" % "4.10" % "test->default")
     val liftwebDependencies = Seq(
       "net.liftweb" %% "lift-webkit" % liftVersion % "compile->default" withSources (),
@@ -45,12 +45,14 @@ object Build extends Build {
   }
 
   object Tasks {
-    //empty now
   }
 
   object Versions {
-    val scalaBuildVersion = "2.9.1"
-    val liftVersion = "2.4"
-    val jettyVersion = "8.0.4.v20111024"
+    val scalaBuildVersion = "2.10.2"
+    val liftVersion = "2.5.1"
+    val postgresqlVersion = "9.2-1003-jdbc4"
+    val h2Version = "1.3.172"
+    val logbackVersion = "1.0.13"
+    val jettyVersion = "8.1.11.v20130520"
   }
 }
