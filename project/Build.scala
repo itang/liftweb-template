@@ -51,7 +51,7 @@ object Build extends Build {
     val scalaBuildVersion = "2.10.2"
     val liftVersion = "2.5.1"
     val postgresqlVersion = "9.2-1003-jdbc4"
-    val h2Version = "1.3.172"
+    val h2Version = "1.3.173"
     val logbackVersion = "1.0.13"
     val jettyVersion = "8.1.11.v20130520"
   }
