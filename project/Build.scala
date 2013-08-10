@@ -28,8 +28,7 @@ object Build extends Build {
 
   object Dependencies {
     val commonsDependencies = Seq(
-      "org.eclipse.jetty" % "jetty-webapp" % jettyVersion  % "container", // For Jetty 8
-      //"org.eclipse.jetty" % "jetty-webapp" % "7.5.4.v20111024" % "container",
+      "org.eclipse.jetty" % "jetty-webapp" % jettyVersion  % "container",
       "javax.servlet" % "servlet-api" % "2.5" % "provided->default",
       "ch.qos.logback" % "logback-classic" % logbackVersion % "compile->default",
       "com.h2database" % "h2" % h2Version,
@@ -53,6 +52,6 @@ object Build extends Build {
     val postgresqlVersion = "9.2-1003-jdbc4"
     val h2Version = "1.3.173"
     val logbackVersion = "1.0.13"
-    val jettyVersion = "8.1.11.v20130520"
+    val jettyVersion = "9.0.4.v20130625" // "8.1.11.v20130520"
   }
 }
